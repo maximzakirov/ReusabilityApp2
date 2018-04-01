@@ -80,12 +80,34 @@ public class MainActivity extends AppCompatActivity{
     public void addToWaste(View v){
         if (v.getId() == R.id.trashButton){
             Calendar cal = Calendar.getInstance();
-            int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
+            int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK)-1;
                 /*DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
                 Date today = new Date();
                 String id = dateFormat.format(today);*/
 
             thisWeeksWaste.getWeeklyWaste().get(dayOfWeek).addTrash();
+
+            update();
+        }
+        if (v.getId() == R.id.recyclingButton){
+            Calendar cal = Calendar.getInstance();
+            int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK)-1;
+                /*DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                Date today = new Date();
+                String id = dateFormat.format(today);*/
+
+            thisWeeksWaste.getWeeklyWaste().get(dayOfWeek).addRecycling();
+
+            update();
+        }
+        if (v.getId() == R.id.compostButton){
+            Calendar cal = Calendar.getInstance();
+            int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK)-1;
+                /*DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+                Date today = new Date();
+                String id = dateFormat.format(today);*/
+
+            thisWeeksWaste.getWeeklyWaste().get(dayOfWeek).addCompost();
 
             update();
         }

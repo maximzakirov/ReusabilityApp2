@@ -53,7 +53,7 @@ public class WeeklyWaste {
 
     public ArrayList<String> listOfTrash(){
         ArrayList<String> trash = new ArrayList<String>();
-        trash.add("T");
+        trash.add("TRASH");
         for (DailyWaste dailyWaste: weeklyWaste){
             trash.add(""+dailyWaste.getTrash());
         }
@@ -61,7 +61,7 @@ public class WeeklyWaste {
     }
     public ArrayList<String> listOfRecycling(){
         ArrayList<String> recycling = new ArrayList<String>();
-        recycling.add("R");
+        recycling.add("RECYCLING");
         for (DailyWaste dailyWaste: weeklyWaste){
             recycling.add(""+dailyWaste.getRecycling());
         }
@@ -69,7 +69,7 @@ public class WeeklyWaste {
     }
     public ArrayList<String> listOfCompost(){
         ArrayList<String> compost = new ArrayList<String>();
-        compost.add("C");
+        compost.add("COMPOST");
         for (DailyWaste dailyWaste: weeklyWaste){
             compost.add(""+ dailyWaste.getCompost());
         }
