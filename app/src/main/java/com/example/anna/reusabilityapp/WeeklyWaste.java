@@ -12,6 +12,10 @@ public class WeeklyWaste {
         }
     }
 
+    public ArrayList<DailyWaste> getWeeklyWaste(){
+        return weeklyWaste;
+    }
+
     public int getWeeklyTrash(){
         int weeklyTrash =0;
         for (DailyWaste dailyWaste: weeklyWaste){

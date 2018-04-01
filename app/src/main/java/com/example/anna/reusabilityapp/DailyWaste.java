@@ -54,4 +54,15 @@ public class DailyWaste {
     public int getCompost(){
         return dailyWaste.get(2).getCounter();
     }
+    public void addTrash(){
+        dailyWaste.get(0).addToCounter();
+    }
+
+    public void addRecycling(){
+        dailyWaste.get(1).addToCounter();
+    }
+
+    public void addCompost(){
+        dailyWaste.get(2).addToCounter();
+    }
 }
